@@ -4,10 +4,10 @@ extends CharacterBody2D
 @export var speed = 1000
 
 func _ready() -> void:
-	# Get the viewport size
-	#var window_size = get_viewport_rect()
-	## Set the initial position to the center of the screen
-	#position = window_size.size / 2
+	 #Get the viewport size
+	var window_size = get_viewport_rect()
+	# Set the initial position to the center of the screen
+	position = window_size.size / 2
 	pass
 	
 func _physics_process(delta: float) -> void:
@@ -19,12 +19,20 @@ func movement() -> void:
 	# Get input from keyboard
 	if Input.is_action_pressed("up"):
 		input_direction.y -= 1
-	if Input.is_action_pressed("down"):
+		$AnimatedSprite2D.play("up")
+	elif Input.is_action_pressed("down"):
 		input_direction.y += 1
-	if Input.is_action_pressed("left"):
+		$AnimatedSprite2D.play("down")
+	elif Input.is_action_pressed("left"):
 		input_direction.x -= 1
-	if Input.is_action_pressed("right"):
+		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play("side")
+	elif Input.is_action_pressed("right"):
 		input_direction.x += 1
+		$AnimatedSprite2D.flip_h = true
+		$AnimatedSprite2D.play("side")
+	else:
+		$AnimatedSprite2D.play("idle")
 		
 	# Normalize the vector to prevent faster diagonal movement
 	velocity = input_direction.normalized() * speed
