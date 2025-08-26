@@ -217,6 +217,7 @@ tile_set = SubResource("TileSet_nuccc")
 [node name="nobura" parent="." instance=ExtResource("3_b0kse")]
 z_index = 5
 position = Vector2(65.505, 94)
+speed = 1000
 
 [node name="Camera2D" type="Camera2D" parent="nobura"]
 z_index = 99

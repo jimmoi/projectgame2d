@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # The speed of the character
-@export var speed = 300.0
+@export var speed = 1000
 
 func _ready() -> void:
 	# Get the viewport size
