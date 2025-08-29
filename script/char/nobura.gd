@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 # The speed of the character
-@export var speed = 300.0
+@export var speed = 15.0
 
 func _ready() -> void:
 	 #Get the viewport size
 	var window_size = get_viewport_rect()
 	# Set the initial position to the center of the screen
-	position = window_size.size / 2
+	#position = window_size.size / 2
 	pass
 	
 func _physics_process(delta: float) -> void:
@@ -32,7 +32,7 @@ func movement() -> void:
 		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.play("side")
 	else:
-		$AnimatedSprite2D.play("idle")
+		$AnimatedSprite2D.pause()
 		
 	# Normalize the vector to prevent faster diagonal movement
 	velocity = input_direction.normalized() * speed
