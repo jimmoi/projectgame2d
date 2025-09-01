@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=4 uid="uid://bdwyrlvqs72q6"]
+[gd_scene load_steps=12 format=4 uid="uid://bdwyrlvqs72q6"]
 
 [ext_resource type="Texture2D" uid="uid://dosowxyowobq4" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_8kqyu"]
 [ext_resource type="Script" uid="uid://beku6sn1r7t7g" path="res://script/scene/map_god.gd" id="1_h2e3o"]
 [ext_resource type="Texture2D" uid="uid://dbso7xyjsp5y8" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="2_h2e3o"]
 [ext_resource type="Texture2D" uid="uid://dn6hweim8bhol" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="3_ftnx5"]
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="4_nprl2"]
+[ext_resource type="Texture2D" uid="uid://bs1k34bcxa5su" path="res://asset/graphic/light/light_2.png" id="6_nprl2"]
+[ext_resource type="Script" uid="uid://b6eschvk0ilir" path="res://script/machanic/light.gd" id="7_nprl2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vt0kc"]
 texture = ExtResource("1_8kqyu")
@@ -817,5 +819,14 @@ drag_vertical_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
+[node name="PointLight2D" type="PointLight2D" parent="nobura"]
+position = Vector2(0, -53)
+color = Color(1, 0.731464, 0.65499, 1)
+energy = 0.5
+range_z_min = -4096
+texture = ExtResource("6_nprl2")
+offset = Vector2(72, 5)
+script = ExtResource("7_nprl2")
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+color = Color(0.0180051, 0.0180051, 0.0180051, 1)
