@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 # The speed of the character
-@export var speed = 1000
+@export var speed = 130
 
 func _ready() -> void:
 	 #Get the viewport size
 	var window_size = get_viewport_rect()
 	# Set the initial position to the center of the screen
-	position = window_size.size / 2
+	#position = window_size.size / 2
 	pass
 	
 func _physics_process(delta: float) -> void:

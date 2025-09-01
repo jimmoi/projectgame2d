@@ -1577,7 +1577,6 @@ tile_set = SubResource("TileSet_g4m70")
 [node name="nobura" parent="." instance=ExtResource("6_bhpv2")]
 z_index = 5
 position = Vector2(59, 94)
-speed = 1000
 
 [node name="Camera2D" type="Camera2D" parent="nobura"]
 z_index = 99
