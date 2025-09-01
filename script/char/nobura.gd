@@ -32,7 +32,7 @@ func movement() -> void:
 		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.play("side")
 	else:
-		$AnimatedSprite2D.play("idle")
+		$AnimatedSprite2D.pause()
 		
 	# Normalize the vector to prevent faster diagonal movement
 	velocity = input_direction.normalized() * speed
