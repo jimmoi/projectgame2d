@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dyh16g3iesny" path="res://asset/graphic/char/nobura/Nobura_down/sprite_animation.png" id="2_ltw7y"]
 [ext_resource type="Texture2D" uid="uid://cndbji6rm4smf" path="res://asset/graphic/char/nobura/Nobura_side/New Project3.png" id="3_ghns8"]
 [ext_resource type="Texture2D" uid="uid://dvrb5mtwr0pma" path="res://asset/graphic/char/nobura/Nobura_up/New Project.png" id="4_ub3n7"]
-[ext_resource type="AudioStream" uid="uid://b33rmg278dukq" path="res://asset/sound/walk_dirt.mp3" id="6_ghns8"]
+[ext_resource type="PackedScene" uid="uid://cl2x6252f81xj" path="res://scene/sfx.tscn" id="6_ghns8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p7myi"]
 atlas = ExtResource("2_ltw7y")
@@ -188,9 +188,8 @@ shape = SubResource("RectangleShape2D_ltw7y")
 position = Vector2(0, -31)
 shape = SubResource("CapsuleShape2D_e6kn8")
 
-[node name="walk_sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_ghns8")
-volume_db = -3.147
+[node name="walk_sound" parent="." instance=ExtResource("6_ghns8")]
+sound = "walk_dirt"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

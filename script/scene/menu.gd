@@ -7,8 +7,8 @@ func _ready() -> void:
 
 
 func _on_play_button_pressed() -> void:
-	print("Play Pressed")
+	get_tree().change_scene_to_file("res://scene/map_god.tscn")
 
 
 func _on_exit_button_pressed() -> void:
-	print("Exit Pressed")
+	get_tree().quit()

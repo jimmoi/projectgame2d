@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl2x6252f81xj"]
+
+[ext_resource type="Script" uid="uid://c82unb4qtclks" path="res://script/machanic/sfx.gd" id="1_ufb2o"]
+
+[node name="sfx" type="Node2D"]
+script = ExtResource("1_ufb2o")
+sound = "walk_dirt"
+
+[node name="single" type="AudioStreamPlayer2D" parent="."]
+
+[node name="loop" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="finished" from="loop" to="." method="_on_loop_finished"]
