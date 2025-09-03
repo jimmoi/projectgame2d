@@ -5,7 +5,7 @@ extends CharacterBody2D
 # อ้างอิง Node AnimatedSprite2D
 @onready var animated_sprite_2d = $AnimatedSprite2D 
 
-var speed = 100 
+@export var speed = 80 
 var chase_radius = 150 
 
 func _physics_process(delta):
