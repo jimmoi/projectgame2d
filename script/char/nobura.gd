@@ -39,3 +39,31 @@ func movement() -> void:
 	
 	# Call the built-in Godot function to move the character
 	move_and_slide()
+	
+	
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	#print("enter")
+	#if area.is_in_group("flower"):
+		## Your code here for when a flower enters the area.
+		#print("A flower has entered the area!")
+		
+	# Print the name of the area that entered
+	print("Area entered: ", area.name)
+	
+	# Print all the groups the entered area belongs to
+	print("Groups of the entered area: ", area.get_groups())
+	
+	if area.is_in_group("flower"):
+		print("A flower has entered the area!")
+	else:
+		print("The entered area is not in the 'flower' group.")
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	print("exit")
+	if area.is_in_group("flower"):
+		# Your code here for when a flower exits the area.
+		print("A flower has exited the area!")

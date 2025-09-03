@@ -1,10 +1,10 @@
 [gd_scene load_steps=27 format=3 uid="uid://clcdywjnlaeec"]
 
-[ext_resource type="Texture2D" uid="uid://ued2yyep0dld" path="res://asset/graphic/char/nobura/high_res.png" id="1_bhpys"]
+[ext_resource type="Texture2D" uid="uid://bmkncxv2c6pjx" path="res://asset/graphic/char/nobura/high_res.png" id="1_bhpys"]
 [ext_resource type="Script" uid="uid://cuadkgchxu5do" path="res://script/char/nobura.gd" id="1_e6kn8"]
-[ext_resource type="Texture2D" uid="uid://dyh16g3iesny" path="res://asset/graphic/char/nobura/Nobura_down/sprite_animation.png" id="2_ltw7y"]
-[ext_resource type="Texture2D" uid="uid://cndbji6rm4smf" path="res://asset/graphic/char/nobura/Nobura_side/New Project3.png" id="3_ghns8"]
-[ext_resource type="Texture2D" uid="uid://dvrb5mtwr0pma" path="res://asset/graphic/char/nobura/Nobura_up/New Project.png" id="4_ub3n7"]
+[ext_resource type="Texture2D" uid="uid://c76mhy2ilh7on" path="res://asset/graphic/char/nobura/Nobura_down/sprite_animation.png" id="2_ltw7y"]
+[ext_resource type="Texture2D" uid="uid://cc7paaow623mx" path="res://asset/graphic/char/nobura/Nobura_side/New Project3.png" id="3_ghns8"]
+[ext_resource type="Texture2D" uid="uid://cl7dgki888fqb" path="res://asset/graphic/char/nobura/Nobura_up/New Project.png" id="4_ub3n7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p7myi"]
 atlas = ExtResource("2_ltw7y")
@@ -181,10 +181,11 @@ texture = ExtResource("1_bhpys")
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_ltw7y")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 0
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -31)
 shape = SubResource("CapsuleShape2D_e6kn8")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
