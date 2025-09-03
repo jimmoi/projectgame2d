@@ -1,14 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://1dbn37fg1r6j"]
+[gd_scene load_steps=11 format=4 uid="uid://bqc3uy0i8m4y6"]
 
-[ext_resource type="Script" uid="uid://w6pgq0uabm46" path="res://script/gate.gd" id="1_cieyi"]
-[ext_resource type="Texture2D" uid="uid://daiv8hpki0o0x" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Dungeon_Tiles.png" id="3_280lw"]
-[ext_resource type="Texture2D" uid="uid://1x3xno5wx8t8" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png" id="4_eiwhp"]
+[ext_resource type="Script" uid="uid://b6k2oxqw6jkyw" path="res://script/machanic/gate_2.gd" id="1_hc5mf"]
+[ext_resource type="Texture2D" uid="uid://daiv8hpki0o0x" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Dungeon_Tiles.png" id="2_avtfi"]
+[ext_resource type="Texture2D" uid="uid://1x3xno5wx8t8" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png" id="3_4p4e7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivkvk"]
-size = Vector2(27, 33)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uo4nr"]
-texture = ExtResource("4_eiwhp")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_si6dj"]
+texture = ExtResource("3_4p4e7")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -160,9 +157,9 @@ texture = ExtResource("4_eiwhp")
 3:15/0 = 0
 3:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.61873, -8, 1.61873, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_4to3e"]
+[sub_resource type="TileSet" id="TileSet_0shy5"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_uo4nr")
+sources/0 = SubResource("TileSetAtlasSource_si6dj")
 
 [sub_resource type="Animation" id="Animation_bnur0"]
 length = 0.001
@@ -201,30 +198,47 @@ _data = {
 &"open_door": SubResource("Animation_rp1l0")
 }
 
-[node name="Gate" type="Area2D"]
-script = ExtResource("1_cieyi")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r005o"]
+size = Vector2(41, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldlgj"]
+size = Vector2(359, 229)
+
+[node name="gate2" type="Node2D"]
+script = ExtResource("1_hc5mf")
 
 [node name="open" type="Sprite2D" parent="."]
 position = Vector2(0, -23)
-texture = ExtResource("3_280lw")
+texture = ExtResource("2_avtfi")
 region_enabled = true
 region_rect = Rect2(0, 161.868, 32.0528, 46.1727)
 
 [node name="close" type="Sprite2D" parent="."]
 position = Vector2(0, -23)
-texture = ExtResource("3_280lw")
+texture = ExtResource("2_avtfi")
 region_enabled = true
 region_rect = Rect2(-0.0719604, 114.08, 31.9424, 45.6997)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -16.5)
-shape = SubResource("RectangleShape2D_ivkvk")
-
 [node name="wall" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAANAPr/AAAEAA0AAAANAPv/AAAEAA0AAAANAPz/AAAEAA0AAAANAP3/AAAEAA0AAAANAP7/AAAEAA0AAAANAP//AAAEAA0AAAANAAAAAAAEAA0AAAANAAEAAAAEAA0AAAANAAIAAAAEAA0AAAANAAMAAAAEAA0AAAANAAQAAAAEAA0AAAANAAUAAAAEAA0AAAANAAYAAAAEAA0AAAANAAcAAAAEAA0AAAANAAgAAAAEAA0AAAANAAkAAAAEAA4AAAAMAAkAAAACAA8AAAALAAkAAAACAA8AAAAKAAkAAAACAA8AAAAJAAkAAAACAA8AAAAIAAkAAAACAA8AAAAHAAkAAAACAA8AAAAGAAkAAAACAA8AAAAFAAkAAAACAA8AAAAEAAkAAAACAA8AAAADAAkAAAACAA8AAAACAAkAAAACAA8AAAABAAkAAAACAA8AAAAAAAkAAAACAA8AAAD//wkAAAACAA8AAAD+/wkAAAACAA8AAAD9/wkAAAACAA8AAAD8/wkAAAACAA8AAAD7/wkAAAACAA8AAAD6/wkAAAACAA8AAAD5/wkAAAACAA8AAAD4/wkAAAACAA8AAAD3/wkAAAACAA8AAAD2/wkAAAACAA8AAAD1/wkAAAACAA8AAAD0/wkAAAACAA8AAADz/wkAAAABAA8AAADz/wgAAAAAAA0AAADz/wcAAAAAAA0AAADz/wYAAAAAAA0AAADz/wUAAAAAAA0AAADz/wQAAAAAAA0AAADz/wMAAAAAAA0AAADz/wIAAAAAAA0AAADz/wEAAAAAAA0AAADz/wAAAAAAAA0AAADz////AAAAAA0AAADz//7/AAAAAA0AAADz//3/AAAAAA0AAADz//z/AAAAAA0AAADz//v/AAAAAA0AAADz//r/AAAAAA0AAADz//n/AAAAAA0AAADz//j/AAAAAA0AAADz//f/AAAAAAwAAAD0//f/AAACAAsAAAD1//f/AAACAAsAAAD2//f/AAACAAsAAAD3//f/AAACAAsAAAD4//f/AAACAAsAAAD5//f/AAACAAsAAAD6//f/AAACAAsAAAD7//f/AAACAAsAAAD8//f/AAACAAsAAAD9//f/AAACAAsAAAD+//f/AAACAAsAAAD///f/AAACAAsAAAAAAPf/AAACAAsAAAABAPf/AAACAAsAAAACAPf/AAACAAsAAAADAPf/AAACAAsAAAAEAPf/AAACAAsAAAAFAPf/AAACAAsAAAAGAPf/AAACAAsAAAAHAPf/AAACAAsAAAAIAPf/AAACAAsAAAAJAPf/AAACAAsAAAAKAPf/AAACAAsAAAALAPf/AAACAAsAAAAMAPf/AAACAAsAAAANAPf/AAAEAAwAAAANAPj/AAAEAA0AAAANAPn/AAAEAA0AAAA=")
-tile_set = SubResource("TileSet_4to3e")
+tile_set = SubResource("TileSet_0shy5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_6vpf6")
 }
+
+[node name="door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(-0.5, -24.5)
+shape = SubResource("RectangleShape2D_r005o")
+
+[node name="field" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="field"]
+position = Vector2(7.5, 6.5)
+shape = SubResource("RectangleShape2D_ldlgj")
+
+[connection signal="area_entered" from="door" to="." method="_on_door_area_entered"]
+[connection signal="area_entered" from="field" to="." method="_on_field_area_entered"]

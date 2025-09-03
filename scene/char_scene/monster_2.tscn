@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d1n1ulyf4tqwb"]
+[gd_scene load_steps=19 format=3 uid="uid://bsav43gnlo5hn"]
 
 [ext_resource type="Script" uid="uid://1eqwtnvcuk7a" path="res://script/monster_2.gd" id="1_ouov8"]
 [ext_resource type="Texture2D" uid="uid://cliisu0nxt2oq" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Entities/Mobs/Orc Crew/Orc - Warrior/Death/Death-Sheet.png" id="2_0cre7"]
@@ -103,17 +103,17 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_xo03k"]
 radius = 4.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ouov8"]
-radius = 11.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ouov8"]
+radius = 5.0
+height = 20.0
 
-[node name="monster2" type="CharacterBody2D"]
+[node name="monster2" type="CharacterBody2D" groups=["monster"]]
 script = ExtResource("1_ouov8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_pflf7")
-animation = &"idle"
-frame_progress = 0.91492
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
@@ -121,8 +121,9 @@ shape = SubResource("CircleShape2D_xo03k")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -11)
-shape = SubResource("CircleShape2D_ouov8")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["monster"]]
+position = Vector2(0, -3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ouov8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
