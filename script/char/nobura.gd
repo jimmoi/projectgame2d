@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
 # The speed of the character
-@export var speed = 130
+@export var speed = 15.0
+signal near_flower_signal(text_visible)
+signal pick_flower_signal
+var flower = null
 
 func _ready() -> void:
 	 #Get the viewport size
@@ -39,3 +42,23 @@ func movement() -> void:
 	
 	# Call the built-in Godot function to move the character
 	move_and_slide()
+	
+	
+
+func _process(delta: float) -> void:
+	if (flower != null) and (Input.is_key_pressed(KEY_E)):
+		flower.queue_free()
+		pick_flower_signal.emit()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("flower"):
+		near_flower_signal.emit(true, area.get_parent().flower_name)
+		flower = area.get_parent()
+			
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.is_in_group("flower"):
+		near_flower_signal.emit(false, area.get_parent().flower_name)
+		flower = null

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://yka7mivtnhc2"]
 
-[ext_resource type="Texture2D" uid="uid://bwoq14pqnel5t" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_pa2i8"]
-[ext_resource type="Texture2D" uid="uid://2ktoj4oapqm" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" id="2_b0kse"]
+[ext_resource type="Texture2D" uid="uid://c2p22kss53asq" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_pa2i8"]
+[ext_resource type="Texture2D" uid="uid://cq7pljtk2t3xi" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" id="2_b0kse"]
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="3_b0kse"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w1wvs"]
