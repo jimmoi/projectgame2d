@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dl8t41ioph8ft"]
+[gd_scene load_steps=31 format=4 uid="uid://bkq738h0if6cp"]
 
 [ext_resource type="Texture2D" uid="uid://bwoq14pqnel5t" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_bqrp6"]
 [ext_resource type="Script" uid="uid://dgaaitpr4g076" path="res://script/map_khong.gd" id="1_iu3xh"]
@@ -13,9 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="6_lalq3"]
 [ext_resource type="Texture2D" uid="uid://cpqgluehyf2ev" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_03.png" id="10_v6b3x"]
 [ext_resource type="Texture2D" uid="uid://vn0vlpt7vcgv" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="11_t42u5"]
-[ext_resource type="PackedScene" uid="uid://sl6bl6av2b8h" path="res://scene/char_scene/monster.tscn" id="14_ax3uy"]
-[ext_resource type="PackedScene" uid="uid://1dbn37fg1r6j" path="res://scene/Portal/gate.tscn" id="15_v6b3x"]
-[ext_resource type="PackedScene" uid="uid://d1n1ulyf4tqwb" path="res://scene/char_scene/monster_2.tscn" id="16_bmix0"]
+[ext_resource type="PackedScene" uid="uid://bfxrbx60gwvry" path="res://scene/char_scene/i_am_atomic.tscn" id="14_1dj4e"]
+[ext_resource type="PackedScene" uid="uid://c7utspksk3lwy" path="res://scene/char_scene/monster.tscn" id="14_ax3uy"]
+[ext_resource type="PackedScene" uid="uid://bqc3uy0i8m4y6" path="res://scene/Portal/gate_2.tscn" id="16_1dj4e"]
+[ext_resource type="PackedScene" uid="uid://bsav43gnlo5hn" path="res://scene/char_scene/monster_2.tscn" id="16_bmix0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vt0kc"]
 texture = ExtResource("1_bqrp6")
@@ -2452,12 +2453,12 @@ y_sort_origin = 1
 metadata/_edit_group_ = true
 
 [node name="nobura" parent="." instance=ExtResource("6_lalq3")]
-position = Vector2(24, 10)
+position = Vector2(19, 0)
 scale = Vector2(0.5, 0.5)
 speed = 150.0
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="nobura"]
-visible = false
 z_index = 99
 zoom = Vector2(4, 4)
 limit_left = -40
@@ -2471,17 +2472,47 @@ drag_vertical_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="Gate" parent="." instance=ExtResource("15_v6b3x")]
-position = Vector2(967, 617)
+[node name="I_am_Atomic" parent="nobura/Camera2D" instance=ExtResource("14_1dj4e")]
+visible = false
+position = Vector2(-478, -266)
+scale = Vector2(0.5, 0.5)
 
-[node name="Monster" parent="." instance=ExtResource("14_ax3uy")]
-position = Vector2(266, 88)
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="monster2" parent="." instance=ExtResource("16_bmix0")]
-position = Vector2(904, 574)
+[node name="Monster3" parent="Node2D" instance=ExtResource("14_ax3uy")]
+position = Vector2(291, 387)
 
-[node name="monster3" parent="." instance=ExtResource("16_bmix0")]
-position = Vector2(869, 674)
+[node name="Monster4" parent="Node2D" instance=ExtResource("14_ax3uy")]
+position = Vector2(800, 193)
 
-[node name="monster4" parent="." instance=ExtResource("16_bmix0")]
-position = Vector2(985, 676)
+[node name="Monster5" parent="Node2D" instance=ExtResource("14_ax3uy")]
+position = Vector2(1605, 193)
+
+[node name="Monster6" parent="Node2D" instance=ExtResource("14_ax3uy")]
+position = Vector2(1637, 927)
+
+[node name="Monster2" parent="Node2D" instance=ExtResource("14_ax3uy")]
+position = Vector2(261, 862)
+
+[node name="Monster7" parent="Node2D" instance=ExtResource("14_ax3uy")]
+position = Vector2(1045, 992)
+
+[node name="Monster" parent="Node2D" instance=ExtResource("14_ax3uy")]
+position = Vector2(1342, 570)
+
+[node name="big_mob" type="Node2D" parent="."]
+
+[node name="monster3" parent="big_mob" instance=ExtResource("16_bmix0")]
+position = Vector2(885, 528)
+
+[node name="monster2" parent="big_mob" instance=ExtResource("16_bmix0")]
+position = Vector2(885, 698)
+
+[node name="monster5" parent="big_mob" instance=ExtResource("16_bmix0")]
+position = Vector2(997, 721)
+
+[node name="monster4" parent="big_mob" instance=ExtResource("16_bmix0")]
+position = Vector2(933, 584)
+
+[node name="gate2" parent="." instance=ExtResource("16_1dj4e")]
+position = Vector2(967, 616)

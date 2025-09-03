@@ -1,7 +1,8 @@
 extends Node2D
 
 func _ready() -> void:
-	play_cut_scen()
+	#play_cut_scen()
+	pass
 	
 func play_cut_scen() -> void:
 	$VideoStreamPlayer2.play()

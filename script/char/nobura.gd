@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var speed = 15.0
 signal near_flower_signal(text_visible)
 signal pick_flower_signal(text_visible, path)
+signal atomic
 var flower = null
 
 func _ready() -> void:

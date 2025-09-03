@@ -1,9 +1,108 @@
-[gd_scene load_steps=9 format=3 uid="uid://4rqwpv23fg1m"]
+[gd_scene load_steps=9 format=3 uid="uid://bfxrbx60gwvry"]
 
 [ext_resource type="Script" uid="uid://5d7hwqwvqcqa" path="res://i_am_atomic.gd" id="1_ohu0e"]
-[ext_resource type="VideoStream" uid="uid://hkycsplrnvhi" path="res://asset/sound_effect/Atomic.ogv" id="4_2f044"]
-[ext_resource type="VideoStream" uid="uid://e7ye2r2d38un" path="res://asset/sound_effect/541671629_24393218940334356_2703531671603656686_n.ogv" id="4_ohu0e"]
-[ext_resource type="AudioStream" uid="uid://tq35mb8673gr" path="res://asset/sound_effect/i-am-atomic_a1qHWQ9.mp3" id="5_2f044"]
+[ext_resource type="VideoStream" path="res://asset/sound_effect/Atomic.ogv" id="4_2f044"]
+[ext_resource type="VideoStream" path="res://asset/sound_effect/541671629_24393218940334356_2703531671603656686_n.ogv" id="4_ohu0e"]
+[ext_resource type="AudioStream" uid="uid://umtu86e165t2" path="res://asset/sound_effect/i-am-atomic_a1qHWQ9.mp3" id="5_2f044"]
+
+[sub_resource type="Animation" id="Animation_re5bk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(944, 485)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(855, 484)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(691, 484)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_qv2m6"]
 resource_name = "i_am_atomic"
@@ -105,105 +204,6 @@ tracks/7/keys = {
 "values": [false, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_re5bk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AudioStreamPlayer:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Label2:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Label3:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Label:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(944, 485)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Label2:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(855, 484)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Label3:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(691, 484)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("ColorRect:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gexfx"]
 _data = {
 &"RESET": SubResource("Animation_re5bk"),
@@ -222,9 +222,6 @@ offset_top = -83.0
 offset_right = 1910.0
 offset_bottom = 1078.0
 stream = ExtResource("4_2f044")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(966, 539)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -276,3 +273,8 @@ offset_top = 1.0
 offset_right = 1924.0
 offset_bottom = 1083.0
 color = Color(0, 0, 0, 1)
+
+[node name="XXX" type="ColorRect" parent="."]
+visible = false
+offset_right = 1924.0
+offset_bottom = 1078.0

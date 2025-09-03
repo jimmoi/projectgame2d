@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # อ้างอิง Node ผู้เล่น
-@onready var player = get_parent().get_node("nobura")
+@onready var player = get_parent().get_parent().get_node("nobura")
 # อ้างอิง Node AnimatedSprite2D
 @onready var animated_sprite_2d = $AnimatedSprite2D 
 # อ้างอิง Node Area2D ที่ใช้ตรวจจับการชน
