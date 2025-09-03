@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds0nth6t06xmb"]
+
+[ext_resource type="VideoStream" uid="uid://hkycsplrnvhi" path="res://asset/sound_effect/Atomic.ogv" id="1_t5801"]
+
+[node name="test" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -961.0
+offset_top = -533.0
+offset_right = 959.0
+offset_bottom = 547.0
+stream = ExtResource("1_t5801")
+autoplay = true
+loop = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-6, 6)

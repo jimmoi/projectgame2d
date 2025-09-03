@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://1dbn37fg1r6j"]
+[gd_scene load_steps=10 format=4 uid="uid://1dbn37fg1r6j"]
 
-[ext_resource type="Script" uid="uid://w6pgq0uabm46" path="res://gate.gd" id="1_cieyi"]
+[ext_resource type="Script" uid="uid://w6pgq0uabm46" path="res://script/gate.gd" id="1_cieyi"]
 [ext_resource type="Texture2D" uid="uid://daiv8hpki0o0x" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Dungeon_Tiles.png" id="3_280lw"]
 [ext_resource type="Texture2D" uid="uid://1x3xno5wx8t8" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Props.png" id="4_eiwhp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivkvk"]
-size = Vector2(45, 62)
+size = Vector2(27, 33)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uo4nr"]
 texture = ExtResource("4_eiwhp")
@@ -164,6 +164,43 @@ texture = ExtResource("4_eiwhp")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_uo4nr")
 
+[sub_resource type="Animation" id="Animation_rp1l0"]
+resource_name = "open_door"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("close:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_bnur0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("close:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6vpf6"]
+_data = {
+&"RESET": SubResource("Animation_bnur0"),
+&"open_door": SubResource("Animation_rp1l0")
+}
+
 [node name="Gate" type="Area2D"]
 script = ExtResource("1_cieyi")
 
@@ -180,9 +217,14 @@ region_enabled = true
 region_rect = Rect2(-0.0719604, 114.08, 31.9424, 45.6997)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -15)
+position = Vector2(-0.5, -16.5)
 shape = SubResource("RectangleShape2D_ivkvk")
 
 [node name="wall" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAANAPr/AAAEAA0AAAANAPv/AAAEAA0AAAANAPz/AAAEAA0AAAANAP3/AAAEAA0AAAANAP7/AAAEAA0AAAANAP//AAAEAA0AAAANAAAAAAAEAA0AAAANAAEAAAAEAA0AAAANAAIAAAAEAA0AAAANAAMAAAAEAA0AAAANAAQAAAAEAA0AAAANAAUAAAAEAA0AAAANAAYAAAAEAA0AAAANAAcAAAAEAA0AAAANAAgAAAAEAA0AAAANAAkAAAAEAA4AAAAMAAkAAAACAA8AAAALAAkAAAACAA8AAAAKAAkAAAACAA8AAAAJAAkAAAACAA8AAAAIAAkAAAACAA8AAAAHAAkAAAACAA8AAAAGAAkAAAACAA8AAAAFAAkAAAACAA8AAAAEAAkAAAACAA8AAAADAAkAAAACAA8AAAACAAkAAAACAA8AAAABAAkAAAACAA8AAAAAAAkAAAACAA8AAAD//wkAAAACAA8AAAD+/wkAAAACAA8AAAD9/wkAAAACAA8AAAD8/wkAAAACAA8AAAD7/wkAAAACAA8AAAD6/wkAAAACAA8AAAD5/wkAAAACAA8AAAD4/wkAAAACAA8AAAD3/wkAAAACAA8AAAD2/wkAAAACAA8AAAD1/wkAAAACAA8AAAD0/wkAAAACAA8AAADz/wkAAAABAA8AAADz/wgAAAAAAA0AAADz/wcAAAAAAA0AAADz/wYAAAAAAA0AAADz/wUAAAAAAA0AAADz/wQAAAAAAA0AAADz/wMAAAAAAA0AAADz/wIAAAAAAA0AAADz/wEAAAAAAA0AAADz/wAAAAAAAA0AAADz////AAAAAA0AAADz//7/AAAAAA0AAADz//3/AAAAAA0AAADz//z/AAAAAA0AAADz//v/AAAAAA0AAADz//r/AAAAAA0AAADz//n/AAAAAA0AAADz//j/AAAAAA0AAADz//f/AAAAAAwAAAD0//f/AAACAAsAAAD1//f/AAACAAsAAAD2//f/AAACAAsAAAD3//f/AAACAAsAAAD4//f/AAACAAsAAAD5//f/AAACAAsAAAD6//f/AAACAAsAAAD7//f/AAACAAsAAAD8//f/AAACAAsAAAD9//f/AAACAAsAAAD+//f/AAACAAsAAAD///f/AAACAAsAAAAAAPf/AAACAAsAAAABAPf/AAACAAsAAAACAPf/AAACAAsAAAADAPf/AAACAAsAAAAEAPf/AAACAAsAAAAFAPf/AAACAAsAAAAGAPf/AAACAAsAAAAHAPf/AAACAAsAAAAIAPf/AAACAAsAAAAJAPf/AAACAAsAAAAKAPf/AAACAAsAAAALAPf/AAACAAsAAAAMAPf/AAACAAsAAAANAPf/AAAEAAwAAAANAPj/AAAEAA0AAAANAPn/AAAEAA0AAAA=")
 tile_set = SubResource("TileSet_4to3e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6vpf6")
+}

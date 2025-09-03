@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://sl6bl6av2b8h"]
+[gd_scene load_steps=17 format=3 uid="uid://sl6bl6av2b8h"]
 
 [ext_resource type="Script" uid="uid://cb8fbs53wvbfw" path="res://script/monster.gd" id="1_ywdcq"]
 [ext_resource type="Texture2D" uid="uid://croitpdlojbdv" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Entities/Mobs/Orc Crew/Orc - Rogue/Idle/Idle-Sheet.png" id="2_6jxn4"]
@@ -91,6 +91,9 @@ animations = [{
 radius = 4.0
 height = 8.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ywdcq"]
+radius = 8.0
+
 [node name="Monster" type="CharacterBody2D"]
 script = ExtResource("1_ywdcq")
 
@@ -103,3 +106,11 @@ frame_progress = 0.860538
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_arurf")
+
+[node name="Area2D" type="Area2D" parent="." groups=["monster"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_ywdcq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
