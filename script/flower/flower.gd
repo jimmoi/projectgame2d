@@ -9,13 +9,13 @@ var flower_color = {
 	"violet": {"text" : "Violet Flower", "src" : "res://asset/graphic/flower/violet_flower.png"},
 }
 
-var text
+var flower_name
 
 func _ready() -> void:
 	# Correctly setting the Sprite2D texture
 	var sprite_node = $FlowerSprite
 	if sprite_node:
 		sprite_node.texture = load(flower_color[color]["src"])
-		text = flower_color[color]["text"]
+		flower_name = flower_color[color]["text"]
 	else:
 		print("Error: Sprite2D node not found.")

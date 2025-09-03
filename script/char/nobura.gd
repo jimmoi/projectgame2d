@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 # The speed of the character
 @export var speed = 15.0
+signal near_flower_signal(text_visible)
+signal pick_flower_signal
+var flower = null
 
 func _ready() -> void:
 	 #Get the viewport size
@@ -42,28 +45,20 @@ func movement() -> void:
 	
 	
 
+func _process(delta: float) -> void:
+	if (flower != null) and (Input.is_key_pressed(KEY_E)):
+		flower.queue_free()
+		pick_flower_signal.emit()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	#print("enter")
-	#if area.is_in_group("flower"):
-		## Your code here for when a flower enters the area.
-		#print("A flower has entered the area!")
-		
-	# Print the name of the area that entered
-	print("Area entered: ", area.name)
-	
-	# Print all the groups the entered area belongs to
-	print("Groups of the entered area: ", area.get_groups())
-	
 	if area.is_in_group("flower"):
-		print("A flower has entered the area!")
-	else:
-		print("The entered area is not in the 'flower' group.")
+		near_flower_signal.emit(true, area.get_parent().flower_name)
+		flower = area.get_parent()
+			
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	print("exit")
 	if area.is_in_group("flower"):
-		# Your code here for when a flower exits the area.
-		print("A flower has exited the area!")
+		near_flower_signal.emit(false, area.get_parent().flower_name)
+		flower = null

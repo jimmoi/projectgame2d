@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=4 uid="uid://bdwyrlvqs72q6"]
 
-[ext_resource type="Texture2D" uid="uid://c2p22kss53asq" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_8kqyu"]
+[ext_resource type="Texture2D" uid="uid://dosowxyowobq4" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_8kqyu"]
 [ext_resource type="Script" uid="uid://beku6sn1r7t7g" path="res://script/scene/map_god.gd" id="1_h2e3o"]
-[ext_resource type="Texture2D" uid="uid://ckbrv38ost7k5" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="2_h2e3o"]
-[ext_resource type="Texture2D" uid="uid://8nkukckmdoml" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="3_ftnx5"]
+[ext_resource type="Texture2D" uid="uid://dbso7xyjsp5y8" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="2_h2e3o"]
+[ext_resource type="Texture2D" uid="uid://dn6hweim8bhol" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="3_ftnx5"]
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="4_nprl2"]
-[ext_resource type="PackedScene" uid="uid://caock5uff7vnx" path="res://scene/flower/golden_flower.tscn" id="5_nr4jm"]
-[ext_resource type="Texture2D" uid="uid://bnpmq2rnrj3vy" path="res://asset/graphic/light/light_2.png" id="6_nprl2"]
+[ext_resource type="PackedScene" uid="uid://caock5uff7vnx" path="res://scene/flower/flower.tscn" id="5_nr4jm"]
+[ext_resource type="Texture2D" uid="uid://bs1k34bcxa5su" path="res://asset/graphic/light/light_2.png" id="6_nprl2"]
 [ext_resource type="Script" uid="uid://b6eschvk0ilir" path="res://script/machanic/light.gd" id="7_nprl2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vt0kc"]
@@ -806,26 +806,26 @@ y_sort_enabled = true
 position = Vector2(872, 568)
 
 [node name="voletFlower" parent="flower" instance=ExtResource("5_nr4jm")]
-position = Vector2(70, 15)
+position = Vector2(82, 14)
 scale = Vector2(4, 4)
 color = "violet"
 
 [node name="roseFlower" parent="flower" instance=ExtResource("5_nr4jm")]
-position = Vector2(-21, -45)
+position = Vector2(-51, -67)
 scale = Vector2(4, 4)
 color = "rose"
 
 [node name="silverFlower" parent="flower" instance=ExtResource("5_nr4jm")]
-position = Vector2(-19, 22)
+position = Vector2(-51, 14)
 scale = Vector2(4, 4)
 color = "silver"
 
 [node name="goldFlower" parent="flower" instance=ExtResource("5_nr4jm")]
-position = Vector2(72, -55)
+position = Vector2(82, -67)
 scale = Vector2(4, 4)
 
 [node name="nobura" parent="." instance=ExtResource("4_nprl2")]
-position = Vector2(892, 496)
+position = Vector2(834, 357)
 speed = 200.0
 metadata/_edit_group_ = true
 
@@ -852,6 +852,21 @@ range_z_min = -4096
 texture = ExtResource("6_nprl2")
 offset = Vector2(72, 5)
 script = ExtResource("7_nprl2")
+
+[node name="show_text" type="Control" parent="nobura"]
+z_index = 99
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="nobura/show_text"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = 9.0
+offset_right = 93.0
+offset_bottom = 32.0
+text = "Press E to pick Flower"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
