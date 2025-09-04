@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="projectgame2d"
-run/main_scene="uid://b2o03ygifm67i"
+run/main_scene="uid://b1uumpaixt1ws"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.893875, 0.625326, 0.648594, 1)
 config/icon="res://icon.svg"

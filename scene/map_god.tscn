@@ -807,20 +807,17 @@ font_size = 41
 outline_size = 5
 outline_color = Color(0, 0.5, 0.163629, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr4jm"]
-size = Vector2(105, 105)
-
 [sub_resource type="Animation" id="Animation_nr4jm"]
 resource_name = "1"
-length = 7.0
+length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/Label:visible_ratio")
+tracks/0/path = NodePath("CanvasLayer/AnimationPlayer/Label:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 7),
+"times": PackedFloat32Array(0, 14.9333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -831,7 +828,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/Label:visible_ratio")
+tracks/0/path = NodePath("CanvasLayer/AnimationPlayer/Label:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -849,6 +846,9 @@ _data = {
 
 [sub_resource type="LabelSettings" id="LabelSettings_tpiuf"]
 font_size = 50
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr4jm"]
+size = Vector2(105, 105)
 
 [node name="map" type="Node2D"]
 y_sort_enabled = true
@@ -933,6 +933,7 @@ offset = Vector2(72, 5)
 script = ExtResource("7_nprl2")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0923971, 0.0923971, 0.092397, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -976,6 +977,35 @@ offset_bottom = 66.0
 text = "Objective: Find the legend flower."
 label_settings = SubResource("LabelSettings_vtpmo")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_ma6dd")
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/AnimationPlayer"]
+visible = false
+offset_left = -35.0
+offset_top = -28.0
+offset_right = 1934.0
+offset_bottom = 1111.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/AnimationPlayer"]
+texture_filter = 2
+offset_left = 14.0
+offset_top = 306.0
+offset_right = 1451.0
+offset_bottom = 735.0
+scale = Vector2(1.295, 1.295)
+text = "    Nobura สุภาพบุรุษผู้ตกหลุมรักราชินีแห่งอณาจักรตั้งแต่ยัง
+เป็นเพื่อนสมัยเด็ก วันหนึ่งอาณาจักรเกิดวิกฤตที่จะล้มสลาย แต่เขา
+ได้ยินเรื่องราวดอกไม้ในตำนานที่จะช่วยอาณาจักรได้ เขาจึงได้ออกได้
+เดินทางไกลไปถึงที่ป่าแห่งหนึ่งทางตอนใต้ เพื่อที่จะตามหาดอกไม้ใน
+ตำนานนั้น เพื่อกลับไปมอบให้ราชา แทนการแลกเปลี่ยนกับราชินี"
+label_settings = SubResource("LabelSettings_tpiuf")
+vertical_alignment = 1
+
 [node name="door" type="Area2D" parent="."]
 position = Vector2(879, 547)
 metadata/_edit_group_ = true
@@ -983,36 +1013,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
 position = Vector2(0.5, -2.5)
 shape = SubResource("RectangleShape2D_nr4jm")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ma6dd")
-}
-
-[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
-visible = false
-offset_left = 569.0
-offset_top = 180.0
-offset_right = 1078.0
-offset_bottom = 485.0
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="AnimationPlayer"]
-visible = false
-texture_filter = 2
-offset_left = 589.0
-offset_top = 293.0
-offset_right = 2026.0
-offset_bottom = 722.0
-scale = Vector2(0.325, 0.325)
-text = "    \"Nobura\" สุภาพบุรุษผู้ชื่นชอบราชินีแห่งอาณาจักร Ubon เขาได้
-เดินทางไกลไปถึงที่ป่าแห่งหนึ่งทางตอนใต้ เพื่อที่จะตามหาดอกไม้ใน
-ตำนาน เพื่อกลับไปมอบให้ราชินีคนนั้น 
-
-
-"
-label_settings = SubResource("LabelSettings_tpiuf")
-vertical_alignment = 1
 
 [node name="sound" type="Node2D" parent="."]
 

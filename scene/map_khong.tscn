@@ -2453,7 +2453,7 @@ y_sort_origin = 1
 metadata/_edit_group_ = true
 
 [node name="nobura" parent="." instance=ExtResource("6_lalq3")]
-position = Vector2(1113, 436)
+position = Vector2(25, 9)
 scale = Vector2(0.5, 0.5)
 speed = 150.0
 metadata/_edit_group_ = true

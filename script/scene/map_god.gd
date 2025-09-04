@@ -38,13 +38,15 @@ func play_cut_scene():
 	$CanvasLayer.visible=false
 	$CanvasModulate.visible=false
 	
-	$AnimationPlayer/Label.visible = true
-	$AnimationPlayer/ColorRect.visible = true
-	$AnimationPlayer.play("1")
+	var animation = $CanvasLayer/AnimationPlayer
+	
+	animation.get_node("Label").visible = true
+	animation.get_node("ColorRect").visible = true
+	animation.play("1")
 	await get_tree().create_timer(10).timeout
-	$AnimationPlayer.pause()
-	$AnimationPlayer/Label.visible = false
-	$AnimationPlayer/ColorRect.visible = false
+	animation.pause()
+	animation.get_node("Label").visible = false
+	animation.get_node("ColorRect").visible = false
 	
 	$CanvasLayer.visible=true
 	$CanvasModulate.visible=true

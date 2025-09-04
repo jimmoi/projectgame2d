@@ -23,5 +23,5 @@ func _on_field_area_entered(area: Area2D) -> void:
 
 func _on_door_area_entered(area: Area2D) -> void:
 	if can_enter:
-		get_tree().change_scene_to_file("res://scene/ending.tscn") # go to peace 
+		get_tree().change_scene_to_file("res://peace/scene/map_castle.tscn") # go to peace 
 		print("pass")
