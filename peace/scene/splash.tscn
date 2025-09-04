@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://uhwufiquye42"]
+[gd_scene load_steps=7 format=3 uid="uid://c4rmfes6ku2q2"]
 
 [ext_resource type="Script" uid="uid://nhnrc4snlumk" path="res://peace/script/splash.gd" id="1_50j67"]
-[ext_resource type="Texture2D" uid="uid://ddfpbn42iw7hy" path="res://peace/asset/logo/logo.png" id="2_50j67"]
+[ext_resource type="Texture2D" uid="uid://cp2l5d4mkhj46" path="res://peace/asset/logo/logo.png" id="2_50j67"]
 
 [sub_resource type="Animation" id="Animation_13jq6"]
 length = 0.001

@@ -1,6 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://cjjrdtte5xsn1"]
+[gd_scene load_steps=28 format=3 uid="uid://cjjrdtte5xsn1"]
 
-[ext_resource type="Script" path="res://peace/script/map_castle.gd" id="1_7eyfy"]
+[ext_resource type="Script" uid="uid://df600iqr78exg" path="res://peace/script/map_castle.gd" id="1_7eyfy"]
 [ext_resource type="Texture2D" uid="uid://dc6sm8jq7lc5u" path="res://peace/asset/tilemap/upscalemedia-transformed.jpeg" id="1_y3o4o"]
 [ext_resource type="Texture2D" uid="uid://05wcbdtflqfs" path="res://peace/asset/tilemap/upscalemedia-transformed (1).jpeg" id="2_i65pn"]
 [ext_resource type="Texture2D" uid="uid://8n81msubwxrd" path="res://peace/asset/tilemap/upscalemedia-removebg(1).png" id="3_4s6i6"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d08skbjm4xx2w" path="res://peace/asset/other/pixellab-Full-body-view--king-1756896258167 (1).png" id="7_pyu1m"]
 [ext_resource type="Texture2D" uid="uid://dob2ht3o1iv41" path="res://peace/asset/other/knight.png" id="8_pyu1m"]
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="9_8t4ly"]
+[ext_resource type="FontFile" uid="uid://eb3x1sniilj6" path="res://asset/font/paaymaay_regular.ttf" id="11_1581m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hcqfh"]
 texture = ExtResource("1_y3o4o")
@@ -9228,6 +9229,7 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_1581m"]
+font = ExtResource("11_1581m")
 font_size = 50
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2umv8"]
@@ -9343,11 +9345,11 @@ color = Color(0, 0, 0, 1)
 [node name="Label" type="Label" parent="CanvasLayer/AnimationPlayer"]
 visible = false
 texture_filter = 2
-offset_left = 14.0
-offset_top = 306.0
-offset_right = 1451.0
-offset_bottom = 735.0
-scale = Vector2(1.295, 1.295)
+offset_left = 7.0
+offset_top = 72.0
+offset_right = 1444.0
+offset_bottom = 501.0
+scale = Vector2(2.34, 2.34)
 text = "    Nobura ได้เดินทางมาถึงปราสาทและได้ทำการมอบดอกไม้
 ในตำนานให้กับทางอาณาจักร เพื่อเป็นการแลกเปลี่ยนกับราชินี
 ที่เป็นที่รักของเขา และทั้งสองจึงได้ครองรักกันชั่วนิจนิรันด์

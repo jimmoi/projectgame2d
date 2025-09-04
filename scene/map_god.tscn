@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bdwyrlvqs72q6"]
+[gd_scene load_steps=23 format=4 uid="uid://bdwyrlvqs72q6"]
 
 [ext_resource type="Texture2D" uid="uid://bwoq14pqnel5t" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_8kqyu"]
 [ext_resource type="Script" uid="uid://beku6sn1r7t7g" path="res://script/scene/map_god.gd" id="1_h2e3o"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://caock5uff7vnx" path="res://scene/flower/flower.tscn" id="5_nr4jm"]
 [ext_resource type="Texture2D" uid="uid://bnpmq2rnrj3vy" path="res://asset/graphic/light/light_2.png" id="6_nprl2"]
 [ext_resource type="Script" uid="uid://b6eschvk0ilir" path="res://script/machanic/light.gd" id="7_nprl2"]
+[ext_resource type="FontFile" uid="uid://eb3x1sniilj6" path="res://asset/font/paaymaay_regular.ttf" id="9_tpiuf"]
 [ext_resource type="PackedScene" uid="uid://cl2x6252f81xj" path="res://scene/sfx.tscn" id="9_vtpmo"]
 [ext_resource type="AudioStream" uid="uid://b4fxr63yvcr2n" path="res://asset/sound/night_forest.mp3" id="10_ma6dd"]
 
@@ -845,6 +846,7 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_tpiuf"]
+font = ExtResource("9_tpiuf")
 font_size = 50
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nr4jm"]
@@ -984,7 +986,6 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/AnimationPlayer"]
-visible = false
 offset_left = -35.0
 offset_top = -28.0
 offset_right = 1934.0
@@ -993,11 +994,11 @@ color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="CanvasLayer/AnimationPlayer"]
 texture_filter = 2
-offset_left = 14.0
-offset_top = 306.0
-offset_right = 1451.0
-offset_bottom = 735.0
-scale = Vector2(1.295, 1.295)
+offset_left = 57.0
+offset_top = 76.0
+offset_right = 1494.0
+offset_bottom = 505.0
+scale = Vector2(2.14, 2.14)
 text = "    Nobura สุภาพบุรุษผู้ตกหลุมรักราชินีแห่งอณาจักรตั้งแต่ยัง
 เป็นเพื่อนสมัยเด็ก วันหนึ่งอาณาจักรเกิดวิกฤตที่จะล้มสลาย แต่เขา
 ได้ยินเรื่องราวดอกไม้ในตำนานที่จะช่วยอาณาจักรได้ เขาจึงได้ออก
