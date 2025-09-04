@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://d110lufyl3q56"]
 
-[ext_resource type="Texture2D" uid="uid://c2p22kss53asq" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_d2gan"]
-[ext_resource type="Texture2D" uid="uid://ckbrv38ost7k5" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="2_d2gan"]
-[ext_resource type="Texture2D" uid="uid://8nkukckmdoml" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="3_n2rp7"]
+[ext_resource type="Texture2D" uid="uid://bwoq14pqnel5t" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_d2gan"]
+[ext_resource type="Texture2D" uid="uid://dmn3qwvycbyl2" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="2_d2gan"]
+[ext_resource type="Texture2D" uid="uid://vn0vlpt7vcgv" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="3_n2rp7"]
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="3_vt0kc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vt0kc"]
