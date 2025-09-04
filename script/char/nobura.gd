@@ -58,6 +58,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("flower"):
 		flower = area.get_parent()
 		near_flower_signal.emit(true, flower.flower_name)
+	elif area.is_in_group("dialogue_trigger"):
+		var dialogue_box = get_tree().get_first_node_in_group("dialogue_box")
+		if dialogue_box:
+			dialogue_box.start_dialogue()
 		
 			
 func _on_area_2d_area_exited(area: Area2D) -> void:

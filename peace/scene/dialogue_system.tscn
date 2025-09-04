@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmyl8dbuwjulk"]
+
+[ext_resource type="Script" uid="uid://hwc0let0kax4" path="res://peace/script/dialogue_system.gd" id="1_113rl"]
+
+[node name="DialogueSystem" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_113rl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 146.0
+
+[node name="NameLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 199.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 40
+
+[node name="TextLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 1.0
+offset_right = 793.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 40
+
+[node name="AutoTimer" type="Timer" parent="."]

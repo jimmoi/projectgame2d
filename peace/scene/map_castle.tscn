@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cbto3hajgrm6p"]
+[gd_scene load_steps=23 format=3 uid="uid://cbto3hajgrm6p"]
 
 [ext_resource type="Texture2D" uid="uid://tguj1mnfoh0p" path="res://peace/asset/tilemap/upscalemedia-transformed.jpeg" id="1_y3o4o"]
 [ext_resource type="Texture2D" uid="uid://x8am3iobmqcq" path="res://peace/asset/tilemap/upscalemedia-transformed (1).jpeg" id="2_i65pn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bdhtk4m0elr6c" path="res://peace/asset/other/pixellab-Full-body-view--king-1756896258167 (1).png" id="7_pyu1m"]
 [ext_resource type="Texture2D" uid="uid://bski3vexa8pri" path="res://peace/asset/other/knight.png" id="8_pyu1m"]
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="9_8t4ly"]
+[ext_resource type="PackedScene" uid="uid://bmyl8dbuwjulk" path="res://peace/scene/dialogue_system.tscn" id="10_7eyfy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hcqfh"]
 texture = ExtResource("1_y3o4o")
@@ -9189,6 +9190,9 @@ sources/1 = SubResource("TileSetAtlasSource_8nsls")
 [sub_resource type="TileSet" id="TileSet_i65pn"]
 tile_size = Vector2i(8, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7eyfy"]
+size = Vector2(524.5, 54.5)
+
 [node name="map_castle" type="Node2D"]
 
 [node name="palace" type="Node2D" parent="."]
@@ -9277,3 +9281,17 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="UILayer" type="CanvasLayer" parent="nobura/Camera2D"]
+
+[node name="DialogueSystem" parent="nobura/Camera2D/UILayer" instance=ExtResource("10_7eyfy")]
+offset_left = 363.0
+offset_top = 865.0
+offset_right = 403.0
+offset_bottom = 905.0
+
+[node name="DialogueTrigger" type="Area2D" parent="." groups=["dialogue_trigger"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger"]
+position = Vector2(984.75, 525.75)
+shape = SubResource("RectangleShape2D_7eyfy")

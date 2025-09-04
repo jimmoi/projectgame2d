@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bwtya7sn3w03g" path="res://asset/graphic/char/nobura/high_res.png" id="1_bhpys"]
 [ext_resource type="Script" uid="uid://cuadkgchxu5do" path="res://script/char/nobura.gd" id="1_e6kn8"]
-[ext_resource type="Texture2D" uid="uid://dyh16g3iesny" path="res://asset/graphic/char/nobura/Nobura_down/sprite_animation.png" id="2_ltw7y"]
-[ext_resource type="Texture2D" uid="uid://cndbji6rm4smf" path="res://asset/graphic/char/nobura/Nobura_side/New Project3.png" id="3_ghns8"]
-[ext_resource type="Texture2D" uid="uid://dvrb5mtwr0pma" path="res://asset/graphic/char/nobura/Nobura_up/New Project.png" id="4_ub3n7"]
-[ext_resource type="AudioStream" uid="uid://b33rmg278dukq" path="res://asset/sound/walk_dirt.mp3" id="6_ghns8"]
+[ext_resource type="Texture2D" uid="uid://e6imd406biek" path="res://asset/graphic/char/nobura/Nobura_down/sprite_animation.png" id="2_ltw7y"]
+[ext_resource type="Texture2D" uid="uid://t1op4f6jhskq" path="res://asset/graphic/char/nobura/Nobura_side/New Project3.png" id="3_ghns8"]
+[ext_resource type="Texture2D" uid="uid://cl8gbvkytlpiw" path="res://asset/graphic/char/nobura/Nobura_up/New Project.png" id="4_ub3n7"]
+[ext_resource type="AudioStream" uid="uid://dusas66kfq8gp" path="res://asset/sound/walk_dirt.mp3" id="6_ghns8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p7myi"]
 atlas = ExtResource("2_ltw7y")
