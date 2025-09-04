@@ -198,8 +198,8 @@ _data = {
 &"open_door": SubResource("Animation_rp1l0")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r005o"]
-size = Vector2(41, 59)
+[sub_resource type="CircleShape2D" id="CircleShape2D_hc5mf"]
+radius = 5.52268
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldlgj"]
 size = Vector2(359, 229)
@@ -232,7 +232,7 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
 position = Vector2(-0.5, -24.5)
-shape = SubResource("RectangleShape2D_r005o")
+shape = SubResource("CircleShape2D_hc5mf")
 
 [node name="field" type="Area2D" parent="."]
 

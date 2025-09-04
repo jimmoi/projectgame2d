@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bfxrbx60gwvry"]
 
 [ext_resource type="Script" uid="uid://5d7hwqwvqcqa" path="res://i_am_atomic.gd" id="1_ohu0e"]
-[ext_resource type="VideoStream" path="res://asset/sound_effect/Atomic.ogv" id="4_2f044"]
-[ext_resource type="VideoStream" path="res://asset/sound_effect/541671629_24393218940334356_2703531671603656686_n.ogv" id="4_ohu0e"]
-[ext_resource type="AudioStream" uid="uid://umtu86e165t2" path="res://asset/sound_effect/i-am-atomic_a1qHWQ9.mp3" id="5_2f044"]
+[ext_resource type="VideoStream" uid="uid://hkycsplrnvhi" path="res://asset/sound_effect/Atomic.ogv" id="4_2f044"]
+[ext_resource type="VideoStream" uid="uid://e7ye2r2d38un" path="res://asset/sound_effect/541671629_24393218940334356_2703531671603656686_n.ogv" id="4_ohu0e"]
+[ext_resource type="AudioStream" uid="uid://d2w16py3aaqp2" path="res://asset/sound_effect/i-am-atomic_a1qHWQ9.mp3" id="5_2f044"]
 
 [sub_resource type="Animation" id="Animation_re5bk"]
 length = 0.001

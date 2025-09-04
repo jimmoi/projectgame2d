@@ -28,7 +28,7 @@ func _physics_process(delta):
 
 		var distance_to_player = position.distance_to(player.position)
 		
-		if distance_to_player <= chase_radius:
+		if (distance_to_player <= chase_radius) and (get_parent().get_parent().is_in_field):
 			var direction = (player.position - position).normalized()
 			velocity = direction * speed
 			animated_sprite_2d.play("walk") 

@@ -29,9 +29,8 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if near_door and can_exit and (Input.is_key_pressed(KEY_E)) and not is_exit:
-		#get_tree().change_scene_to_packed(next_scene) map_khong
 		is_exit = true
-		print("go to map khong")
+		get_tree().change_scene_to_file("res://scene/map_khong.tscn")
 		sfx.get_node("aaa").single_sfx_player.play()
 		
 
