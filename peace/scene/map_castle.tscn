@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cbto3hajgrm6p"]
+[gd_scene load_steps=21 format=3 uid="uid://cbto3hajgrm6p"]
 
 [ext_resource type="Texture2D" uid="uid://tguj1mnfoh0p" path="res://peace/asset/tilemap/upscalemedia-transformed.jpeg" id="1_y3o4o"]
 [ext_resource type="Texture2D" uid="uid://x8am3iobmqcq" path="res://peace/asset/tilemap/upscalemedia-transformed (1).jpeg" id="2_i65pn"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cjsxpxw8n6jox" path="res://peace/asset/queen/queen_pix.png" id="6_ohn43"]
 [ext_resource type="Texture2D" uid="uid://bdhtk4m0elr6c" path="res://peace/asset/other/pixellab-Full-body-view--king-1756896258167 (1).png" id="7_pyu1m"]
 [ext_resource type="Texture2D" uid="uid://bski3vexa8pri" path="res://peace/asset/other/knight.png" id="8_pyu1m"]
+[ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="9_8t4ly"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hcqfh"]
 texture = ExtResource("1_y3o4o")
@@ -9256,3 +9257,23 @@ texture = ExtResource("8_pyu1m")
 position = Vector2(644, 674)
 scale = Vector2(-1.7, 1.7)
 texture = ExtResource("8_pyu1m")
+
+[node name="nobura" parent="." instance=ExtResource("9_8t4ly")]
+position = Vector2(1003, 1049)
+scale = Vector2(2, 2)
+speed = 150.0
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="nobura"]
+z_index = 99
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1900
+limit_bottom = 1100
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
