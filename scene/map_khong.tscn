@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bkq738h0if6cp"]
+[gd_scene load_steps=32 format=4 uid="uid://bkq738h0if6cp"]
 
 [ext_resource type="Texture2D" uid="uid://bwoq14pqnel5t" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_bqrp6"]
 [ext_resource type="Script" uid="uid://dgaaitpr4g076" path="res://script/map_khong.gd" id="1_iu3xh"]
@@ -13,10 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://clcdywjnlaeec" path="res://scene/char_scene/nobura.tscn" id="6_lalq3"]
 [ext_resource type="Texture2D" uid="uid://cpqgluehyf2ev" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_03.png" id="10_v6b3x"]
 [ext_resource type="Texture2D" uid="uid://vn0vlpt7vcgv" path="res://asset/graphic/tilesheet/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="11_t42u5"]
-[ext_resource type="PackedScene" uid="uid://4rqwpv23fg1m" path="res://scene/char_scene/i_am_atomic.tscn" id="14_1dj4e"]
-[ext_resource type="PackedScene" uid="uid://sl6bl6av2b8h" path="res://scene/char_scene/monster.tscn" id="14_ax3uy"]
+[ext_resource type="PackedScene" uid="uid://bfxrbx60gwvry" path="res://scene/char_scene/i_am_atomic.tscn" id="14_1dj4e"]
+[ext_resource type="PackedScene" uid="uid://c7utspksk3lwy" path="res://scene/char_scene/monster.tscn" id="14_ax3uy"]
 [ext_resource type="PackedScene" uid="uid://bqc3uy0i8m4y6" path="res://scene/Portal/gate_2.tscn" id="16_1dj4e"]
-[ext_resource type="PackedScene" uid="uid://d1n1ulyf4tqwb" path="res://scene/char_scene/monster_2.tscn" id="16_bmix0"]
+[ext_resource type="PackedScene" uid="uid://bsav43gnlo5hn" path="res://scene/char_scene/monster_2.tscn" id="16_bmix0"]
+[ext_resource type="PackedScene" uid="uid://cl2x6252f81xj" path="res://scene/sfx.tscn" id="18_3w1y0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vt0kc"]
 texture = ExtResource("1_bqrp6")
@@ -2524,3 +2525,7 @@ offset_bottom = 979.0
 visible = false
 position = Vector2(-4, -6)
 scale = Vector2(1.015, 1.015)
+
+[node name="sfx" parent="." instance=ExtResource("18_3w1y0")]
+position = Vector2(-219, 313)
+sound = "summer"

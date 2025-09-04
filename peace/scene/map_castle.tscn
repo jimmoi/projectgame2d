@@ -1,6 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://cbto3hajgrm6p"]
+[gd_scene load_steps=27 format=3 uid="uid://cjjrdtte5xsn1"]
 
-[ext_resource type="Script" uid="uid://df600iqr78exg" path="res://peace/script/map_castle.gd" id="1_7eyfy"]
+[ext_resource type="Script" path="res://peace/script/map_castle.gd" id="1_7eyfy"]
 [ext_resource type="Texture2D" uid="uid://dc6sm8jq7lc5u" path="res://peace/asset/tilemap/upscalemedia-transformed.jpeg" id="1_y3o4o"]
 [ext_resource type="Texture2D" uid="uid://05wcbdtflqfs" path="res://peace/asset/tilemap/upscalemedia-transformed (1).jpeg" id="2_i65pn"]
 [ext_resource type="Texture2D" uid="uid://8n81msubwxrd" path="res://peace/asset/tilemap/upscalemedia-removebg(1).png" id="3_4s6i6"]

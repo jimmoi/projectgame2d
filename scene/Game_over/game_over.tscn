@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cp0372dmpedth"]
+[gd_scene load_steps=12 format=3 uid="uid://cp0372dmpedth"]
 
 [ext_resource type="Script" uid="uid://bdf586xss8koq" path="res://script/game_over.gd" id="1_1q4y1"]
-[ext_resource type="Texture2D" uid="uid://rav7bw0b1d04" path="res://asset/graphic/menu_bg/game-over-1155106115515p66qsjvh-removebg-preview.png" id="1_o7uuv"]
-[ext_resource type="Texture2D" uid="uid://dsvki30o8lqgj" path="res://asset/graphic/char/nobura/Nobura_down/IMG_2619.png" id="2_1q4y1"]
-[ext_resource type="Texture2D" uid="uid://c5oqcgu8b7ivo" path="res://asset/graphic/button/blue button.463Z.png" id="3_uga1r"]
+[ext_resource type="Texture2D" uid="uid://bn3ko8l6kc3k4" path="res://asset/graphic/menu_bg/game-over-1155106115515p66qsjvh-removebg-preview.png" id="1_o7uuv"]
+[ext_resource type="Texture2D" uid="uid://b6r42fv0puwfk" path="res://asset/graphic/char/nobura/Nobura_down/IMG_2619.png" id="2_1q4y1"]
+[ext_resource type="Texture2D" uid="uid://8nveccefcaa4" path="res://asset/graphic/button/blue button.463Z.png" id="3_uga1r"]
+[ext_resource type="PackedScene" uid="uid://cl2x6252f81xj" path="res://scene/sfx.tscn" id="5_uga1r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2gppe"]
 font_size = 200
@@ -241,6 +242,9 @@ root_node = NodePath("../ColorRect")
 libraries = {
 &"": SubResource("AnimationLibrary_uga1r")
 }
+
+[node name="sfx" parent="." instance=ExtResource("5_uga1r")]
+sound = "aaa"
 
 [connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/exit_button" to="." method="_on_exit_button_pressed"]

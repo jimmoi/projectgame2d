@@ -10,7 +10,8 @@ var sfx_files = {
 	"walk_dirt" : "res://asset/sound/walk_dirt.mp3",
 	"walk_grass" : "res://asset/sound/walk_grass.mp3",
 	"aaa" : "res://asset/sound/aaa.mp3",
-	"ara_ara" : "res://asset/sound/ara_ara.mp3"
+	"ara_ara" : "res://asset/sound/ara_ara.mp3",
+	"summer" : "res://asset/sound/summer.mp3"
 }
 
 # The AudioStreamPlayer2D nodes are set up in the editor,

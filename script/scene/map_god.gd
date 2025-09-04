@@ -31,7 +31,6 @@ func _process(delta: float) -> void:
 	if near_door and can_exit and (Input.is_key_pressed(KEY_E)) and not is_exit:
 		is_exit = true
 		get_tree().change_scene_to_file("res://scene/map_khong.tscn")
-		sfx.get_node("aaa").single_sfx_player.play()
 		
 
 func play_cut_scene():
@@ -43,7 +42,7 @@ func play_cut_scene():
 	animation.get_node("Label").visible = true
 	animation.get_node("ColorRect").visible = true
 	animation.play("1")
-	await get_tree().create_timer(10).timeout
+	await get_tree().create_timer(17).timeout
 	animation.pause()
 	animation.get_node("Label").visible = false
 	animation.get_node("ColorRect").visible = false
