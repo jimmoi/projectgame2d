@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://dv8xx7fleuyu4"]
 
-[ext_resource type="Script" uid="uid://eln10m3tt266" path="res://script/scene/ending.gd" id="1_nmv26"]
-[ext_resource type="Texture2D" uid="uid://b3ep1j5nxmu3i" path="res://asset/graphic/end_bg.jpg" id="1_u3snt"]
+[ext_resource type="Script" path="res://script/scene/ending.gd" id="1_nmv26"]
+[ext_resource type="Texture2D" uid="uid://fh15f7yl5kre" path="res://asset/graphic/end_bg.jpg" id="1_u3snt"]
 [ext_resource type="Texture2D" uid="uid://bwtya7sn3w03g" path="res://asset/graphic/char/nobura/high_res.png" id="5_mswrs"]
-[ext_resource type="Texture2D" uid="uid://b3f8nc73pa00y" path="res://asset/graphic/char/ume/high_res.834Z.png" id="6_stq2p"]
+[ext_resource type="Texture2D" uid="uid://clngab3hp4jjb" path="res://asset/graphic/char/ume/high_res.834Z.png" id="6_stq2p"]
 
 [sub_resource type="Animation" id="Animation_34c5d"]
 resource_name = "1"
